@@ -4,7 +4,7 @@
         {
             "type": "shell",
             "label": "g++: Compile/link active file",
-             "command": "g++ -c -g -o ${fileBasenameNoExtension}.o ${fileBasename}; g++ -g ${fileBasenameNoExtension}.o; rm ${fileBasenameNoExtension}.o",
+             "command": "g++ -c -g -Werror=uninitialized -Werror --std=c++20 -o ${fileBasenameNoExtension}.o ${fileBasename}; g++ -g ${fileBasenameNoExtension}.o; rm ${fileBasenameNoExtension}.o",
             "options": {
                 "cwd": "${workspaceFolder}"
             },
